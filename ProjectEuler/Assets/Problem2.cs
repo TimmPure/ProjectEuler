@@ -9,7 +9,7 @@ public class Problem2 : MonoBehaviour
     //1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
     //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-    int sum = 0;
+    int sum = 2; //Adding 2 because we're missing sequence[1] in the sum
     public int[] sequence;
 
     void Start()
@@ -17,7 +17,6 @@ public class Problem2 : MonoBehaviour
         sequence = new int[500];
         sequence[0] = 1;
         sequence[1] = 2;
-        int failproof = 0;
         int j = 1;
 
         for (int i = 2; j < 4000000; i++)
@@ -29,6 +28,6 @@ public class Problem2 : MonoBehaviour
                 sum += j;
             }
         }
-        Debug.Log(sum + 2); //Adding 2 because we're missing sequence[1] in the sum
+        Debug.Log(sum);
     }
 }
